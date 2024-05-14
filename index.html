@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sherlock Holmes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black relative font-mono text-white overflow-x-hidden cursor-none">
+
+    
+    <div class="cursor-outline w-10 h-10 bg-white rounded-full fixed top-0 left-0  z-[600] pointer-events-none mix-blend-difference invisible xl:visible"></div>
+
+    <nav class="bg-transparent border-white border w-screen">
+      <div>
+        <div class="relative flex h-16 items-center justify-between">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center md:ms-10 ms-2"
+          >
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              id="nav-button"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ms-24 me-10"
+          >
+            <div class="hidden md:ml-6 md:block">
+              <div class="flex sm:space-x-4">
+                <a
+                  class="text-gray-300 hover:cursor-scale-6 hover:underline hover:underline-offset-4 block rounded-md px-3 py-2 text-base text-center font-medium"
+                  aria-current="page"
+                  id="aboutbtn"
+                  >About the Novel</a
+                >
+                <a
+                  class="text-gray-300 hover:cursor-scale-6 hover:underline hover:underline-offset-4 block rounded-md px-3 py-2 text-base text-center font-medium"
+                  id="mcbtn"
+                  >Main Characters</a
+                >
+                <a
+                  class="text-gray-300 hover:cursor-scale-6 hover:underline hover:underline-offset-4 block rounded-md px-3 py-2 text-base text-center font-medium"
+                  id="timebtn"
+                  >Timeline</a
+                >
+                <a
+                  class="text-gray-300 hover:cursor-scale-6 hover:underline hover:underline-offset-4 block rounded-md px-3 py-2 text-base text-center font-medium"
+                  id="factbtn"
+                  >Did you know?</a
+                >
+                <a
+                  class="text-gray-300 hover:cursor-scale-6 hover:underline hover:underline-offset-4 block rounded-md px-3 py-2 text-base text-center font-medium"
+                  id="soonbtn"
+                  >Reviews & Ratings</a
+                >
+                <!-- <div class="cursor fixed w-6 h-6 rounded-full bg-white duration-100  pointer-events-none mix-blend-difference z-[100]	"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 ms-6 relative">
+          <a
+            class="text-gray-300 hover:cursor-scale-6 block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+            id="aboutbtn2"
+            >About the Novel</a
+          >
+          <a
+            class="text-gray-300 hover:cursor-scale-6 block rounded-md px-3 py-2 text-base font-medium"
+            id="mcbtn2"
+            >Main Characters</a
+          >
+          <a
+            class="text-gray-300 hover:cursor-scale-6 block rounded-md px-3 py-2 text-base font-medium"
+            id="timebtn2"
+            >Timeline</a
+          >
+          <a
+            class="text-gray-300 hover:cursor-scale-6 block rounded-md px-3 py-2 text-base font-medium"
+            id="factbtn2"
+            >Did you know?</a
+          >
+          <a
+            class="text-gray-300 hover:cursor-scale-6 block rounded-md px-3 py-2 text-base font-medium"
+            id="soonbtn2"
+            >Reviews & Ratings</a
+          >
+          
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="flex flex-col-reverse w-screen justify-end sticky top-18 pt-10 h-screen min-[905px]:flex-row min-[905px]:top-0"
+    >
+      <img src="assets/images/header.png" alt="" class="animate-heads"/>
+      <div class="min-[905px]:text-end min-[905px]:items-end  flex flex-col justify-center min-[905px]:pe-5 lg:pe-10 xl:pe-40">
+        <h1
+          class="text-white text-center flex font-[sherlock] min-[905px]:text-right text-4xl min-[452px]:text-5xl min-[602px]:text-6xl min-[752px]:text-7xl min-[1280px]:text-8xl tracking-widest hover:transition-all hover:scale-105 transition-all"
+        >
+          SHERLOCK HOLMES
+        </h1>
+        <br /><br />
+        <button
+          class="bg-transparent animate-pulse w-40 mx-auto min-[905px]:mx-0 min-[905px]:me-4 border border-white border-spacing-5 p-3 rounded-md hover:bg-white hover:text-black hover:border-black"
+          id="discover"
+        >
+          DISCOVER MORE
+        </button>
+      </div>
+    </header>
+
+    <main class="bg-black sticky" id="all">
+      
+      <section id="aboutsec my-20 flex flex-col h-screen w-screen">
+        <hr />
+        
+        <h1
+          class="text-white reveal hover:cursor-scale-6  font-[sherlock] text-6xl pt-14 flex justify-center hover:transition-all hover:scale-105 transition-all"
+        >
+          About
+        </h1>
+        <div class="grid-cols-2 lg:flex justify-around gap-5">
+          <div class="flex flex-col lg:pt-20 xl:pt-32 p-20 pb-5 lg:ps-20">
+            <h2 class="text-left reveal">the author...</h2>
+            <h1 class="text-5xl reveal flex bg-white text-black hover:transition-all">
+              Arthur Conan Doyle
+            </h1>
+            <p class="reveal"><small>May 22, 1859 - July 7, 1930</small></p>
+            <ul class="list-disc mt-6">
+              <li class="hover:underline hover:underline-offset-4 reveal">
+                British writer and physician
+              </li>
+              <li class="hover:underline hover:underline-offset-4 reveal">
+                created the character Sherlock Holmes in 1887
+              </li>
+              <li class="hover:underline hover:underline-offset-4 reveal">
+                wrote 4 novels & 58 short stories of Sherlock Holmes
+              </li>
+              <li class="hover:underline hover:underline-offset-4 reveal">
+                Sherlock Holmes stories are milestones in the <br />
+                field of crime fiction
+              </li>
+              <li class="hover:underline hover:underline-offset-4 reveal">
+                Other works:
+                <span class="italic"
+                  >Professor Challenger, The White Company</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sm:max-w-3xl lg:max-w-2xl mx-auto gap-5 columns-2 space-y-5 p-5 lg:pt-20 lg:mb-20">
+            <img
+              src="assets/images/author1.png"
+              alt=""
+              class="hover:transition-all hover:scale-105 hover:overflow-hidden transition-all reveal"
+            />
+            <img
+              src="assets/images/author2.png"
+              alt=""
+              class="hover:transition-all hover:scale-105 hover:overflow-hidden transition-all reveal"
+            />
+            <img
+              src="assets/images/author3.png"
+              alt=""
+              class="hover:transition-all hover:scale-105 hover:overflow-hidden transition-all reveal"
+            />
+          </div>
+        </div>
+       
+      </section>
+      <hr />
+      <section
+        class=" content-center h-screen justify-center w-screen flex flex-col md:flex-row"
+        id="character"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <h1
+            class="text-white font-[sherlock] text-center reveal md:text-5xl text-3xl sm:text-4xl lg:text-6xl p-8 flex justify-center items-center hover:transition-all hover:scale-105 transition-all"
+          >
+            Main Characters
+          </h1>
+          <div class="w-60  border border-white bg-black md:mt-10 text-white mc-data-holder p-3 text-left flex justify-start reveal  ">
+            <span class="italic">Hover/Press the characters</span>
+          </div>
+          <div class="w-60 border border-white bg-black mt-3 text-white mc-data-holder2 p-3 text-left flex justify-start reveal ">
+            <span class="italic">Hover/Press the characters</span>
+          </div>
+          <div class="w-60 border border-white bg-black mt-3 text-white mc-data-holder3 p-3 text-left flex justify-start reveal ">
+            <span class="italic">Hover/Press the characters</span>
+          </div>
+          <div class="w-60  border border-white bg-black mt-3 text-white mc-data-holder4 p-3 text-left flex justify-start reveal mb-5 ">
+            <span class="italic">Hover/Press the characters</span>
+          </div>
+        </div>
+        <div
+          class="group w-screen container pe-0 mx-auto grid grid-cols-none xl:grid-cols-4 relative gap-4 md:h-screen h-96  transition-all charactersContainer lg:pe-10  "
+        >
+          <div
+            class="box box-1 characters-box after:content-['Sherlock_Holmes'] group-hover:blur-sm hover:!blur-none reveal"
+            style="
+              background-image: url(https://i.pinimg.com/736x/d2/58/9d/d2589d94c26d280077746ef6e1cd5d54.jpg);
+            "
+            data-content1="
+            :Private Detective  
+           "
+           data-content2="
+           :Born in 1854 
+           "
+           data-content3="
+           :221b Baker Street, London  
+           "
+           data-content4="
+           :Brother of Mycroft Holmes"
+          ></div>
+          <div
+            class="box box-2 bg-[url('https://i.pinimg.com/736x/8e/9a/22/8e9a22ac5ca2444d7da31db4cc666353.jpg')] characters-box after:content-['John_H._Watson'] sm:mb-0 group-hover:blur-sm hover:!blur-none reveal"
+            data-content1="
+            :Physician, writer, British Army surgeon, war veteran
+           "
+           data-content2="
+           :Born in 1852
+           "
+           data-content3="
+           :221b Baker Street, London
+           "
+           data-content4="
+           :Sherlock Holmes's friend and confidant"
+          ></div>
+          <div
+            class="box box-3 bg-[url('https://i.pinimg.com/originals/b8/e7/f2/b8e7f269f5ef345e6b4ace742fcf04b7.jpg')] characters-box after:content-['James_Moriarty'] group-hover:blur-sm hover:!blur-none reveal"
+            data-content1="
+            :Professor of mathematics (formerly), Criminal mastermind ('Napolean of Crime')
+           "
+           data-content2="
+           :Born in 1835
+           "
+           data-content3="
+           :Sherlock Holmes' archenemy
+           "
+           data-content4=""
+            
+          ></div>
+          <div
+            class="box box-4 bg-[url('https://i.pinimg.com/originals/17/d4/d9/17d4d905224b5c5db4b5cf314b5f586c.jpg')]  characters-box after:content-['Mycroft_Holmes'] group-hover:blur-sm hover:!blur-none reveal"
+            data-content1="
+            :Government official
+           "
+           data-content2="
+           :Born in 1847
+           "
+           data-content3="
+           :Smarter but lazier than Sherlock
+           "
+           data-content4=":Elder brother of Sherlock Holmes"
+          ></div>
+        </div>
+      </section>
+      <hr />
+      <section id="timeline" >
+        <div class="flex flex-col justify-center">
+          <div class="flex justify-center align-baseline mt-20 my-5 gap-3 items-center">
+            <h1
+              class="text-white font-[sherlock] reveal text-center z-20 text-5xl md:text-6xl lg:text-7xl xl:*:text-8xl pb-5 flex justify-center hover:transition-all hover:scale-105 transition-all"
+            >
+              Timeline
+            </h1>
+          </div>
+            <h3
+              class="text-center reveal mb-10 hover:underline hover:underline-offset-4"
+            >
+              Some of Sherlock Holme's famous cases ever solved.
+            </h3>
+          
+        </div>
+        <div
+          class="container mx-auto px-6 mb-12 text-black relative flex flex-col space-y-8"
+        >
+          <div
+            class="absolute w-2 z-0 h-full bg-white shadow-md inset-0 left-18 md:mx-auto md:right-0 md:left-0 reveal"
+          ></div>
+          <div class="relative z-10 reveal">
+            <div class="flex">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/ArthurConanDoyle_AStudyInScarlet_annual.jpg/330px-ArthurConanDoyle_AStudyInScarlet_annual.jpg"
+                alt=""
+                class="timeline-img"
+              />
+              <!-- <div class="absolute hidden  md:block md:ml-[400px] h-full lg:ml-[600px] xl:ml-[770px] 2xl:ml-[780px] ">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.93/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/yzjteQISmCblWjZQ/scene.splinecode"></spline-viewer>
+              </div> -->
+            </div>
+           
+            <div class="timeline-container timeline-container-left">
+              
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> 1887</small
+                >
+                <h2 class="font-bold text-3xl">A Study in Scarlet</h2>
+                <p>
+                  The story marks the first appearance of Sherlock Holmes and
+                  Dr. Watson, who would become the most famous detective duo in
+                  literature. The book's title derives from a speech given by
+                  Holmes, a consulting detective, to his friend and chronicler
+                  Watson on the nature of his work, in which he describes the
+                  story's murder investigation as his "study in scarlet":
+                  "There's the scarlet thread of murder running through the
+                  colourless skein of life, and our duty is to unravel it, and
+                  isolate it, and expose every inch of it."<br />
+                  <br /><span class="hidden" id="more-text13">
+                    <b>Part 1:</b> After returning from the Second Anglo-Afghan
+                    War, Dr. John Watson moves in with Sherlock Holmes at 221B
+                    Baker Street. Holmes, a consulting detective, impresses
+                    Watson with his deductive prowess. They investigate the
+                    murder of Enoch Drebber, finding a cryptic message ("RACHE")
+                    and a wedding ring. Holmes deduces the murderer's
+                    description and sets a trap with a duplicate ring. A
+                    suspect, Hope, is arrested but later revealed to be the
+                    murderer when Stangerson, another victim, is found with the
+                    same message. Using street urchins, Holmes captures Hope,
+                    the cabby, who confesses to the murders. <br /><br />
+                    <b>Part 2:</b> In 1847 Utah, John Ferrier and Lucy, saved by
+                    Mormons, face a choice: convert or die. In 1860, Lucy loves
+                    Jefferson Hope but is forced to marry. Lucy dies
+                    heartbroken, fueling Hope's quest for vengeance. Across
+                    continents and years, Hope hunts down his targets,
+                    culminating in a gripping showdown in London. As Hope exacts
+                    chilling revenge, readers are drawn into a tale of love,
+                    betrayal, and justice, where hope and despair collide in a
+                    riveting narrative. Holmes deduced the case and Watson
+                    decides to write about it.
+                  </span>
+                  <br />
+                  <button id="toggle-btn13" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn13" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://www.thecollector.com/sherlock-holmes-arthur-conan-doyle/"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >thecollector.com</a
+                      >
+                      ,
+                      <a
+                        href="https://en.wikipedia.org/wiki/A_Study_in_Scarlet"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Spec-04.jpg/220px-Spec-04.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> February, 1892</small
+                >
+                <h2 class="font-bold text-3xl">The Speckled Band</h2>
+                <p>
+                  "The Speckled Band" is a classic locked-room mystery that
+                  deals with the themes of parental greed, inheritance and
+                  freedom. Tinged with Gothic elements, it is considered by many
+                  to be one of Doyle's finest works, with the author himself
+                  calling it his best story. <br />
+                  <br /><span class="hidden" id="more-text">
+                    Sherlock Holmes and Dr. Watson embark on a gripping
+                    adventure at Stoke Moran, where danger lurks in the shadows
+                    of a sinister stepfather's schemes. With Helen Stoner's life
+                    on the line, they uncover a tangled web of deceit spun by
+                    Dr. Grimesby Roylott, a menacing figure with a troubled
+                    past. As they race against time, Holmes confronts a venomous
+                    foe, revealing Roylott's chilling plot to claim his
+                    stepdaughter's fortune. In a thrilling showdown, justice is
+                    served, but not without sacrifice, as Holmes navigates a
+                    moral dilemma to shield Helen from further heartache.</span
+                  >
+                  <br />
+                  <button id="toggle-btn" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Speckled_Band"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Paget_Holmes_Yellow_Face_child.jpg/330px-Paget_Holmes_Yellow_Face_child.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container timeline-container-left">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> February 1893
+                </small>
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Yellow Face
+                </h2>
+                <p>
+                  One of Doyle's sentimental pieces, the story is remarkable in
+                  that Holmes' deduction during the course of it proves
+                  incorrect. According to Dr. Watson: <br /><br />
+                  <span class="italic"
+                    ><small
+                      >"...where he failed it happened too often that no one
+                      else succeeded... Now and again, however, it chanced that
+                      even when he erred the truth was still discovered."</small
+                    >
+                  </span>
+                  <br />
+                  <br /><span class="hidden" id="more-text4">
+                    Holmes deduces from a visitor's forgotten pipe that the man
+                    is disturbed but muscular, left-handed, and careless. When
+                    Grant Munro seeks Holmes's help over his wife's suspicious
+                    behavior, Holmes suspects her first husband is blackmailing
+                    her. Investigating, they find a masked figure in a cottage,
+                    who turns out to be Effie's daughter from her first
+                    marriage. Effie confesses her secret, and Munro forgives
+                    her, embracing their daughter. Touched by Munro's response,
+                    Holmes reflects on the case, promising to remain
+                    vigilant.</span
+                  >
+                  <br />
+                  <button id="toggle-btn4" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn4" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Yellow_Face"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <div class="flex">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/The_Greek_Interpreter_by_William_Henry_Hyde_1.jpg/330px-The_Greek_Interpreter_by_William_Henry_Hyde_1.jpg"
+                alt=""
+                class="timeline-img"
+              />
+              
+            </div>
+            <div class="timeline-container">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> September 1893</small
+                >
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Greek Interpreter
+                </h2>
+                <p>
+                  The Adventure of the Greek Interpreter", one of the 56
+                  Sherlock Holmes short stories written by Sir Arthur Conan
+                  Doyle, is one of 12 stories in the cycle collected as The
+                  Memoirs of Sherlock Holmes. The story was originally published
+                  in The Strand Magazine (UK) and Harper's Weekly (US) in
+                  September 1893.[1] This story introduces Holmes's elder
+                  brother Mycroft. Doyle ranked "The Greek Interpreter"
+                  seventeenth in a list of his nineteen favourite Sherlock
+                  Holmes stories.<br />
+                  <br /><span class="hidden" id="more-text5">
+                    One summer evening, Dr. Watson learns of Sherlock Holmes's
+                    elder brother, Mycroft, whose powers of deduction rival
+                    Holmes's own. Despite his brilliance, Mycroft lacks the
+                    ambition for detective work. When a Greek interpreter named
+                    Melas recounts a harrowing ordeal involving a kidnapping,
+                    Mycroft seeks Holmes's help. Melas describes being coerced
+                    into translating for a captive, Kratides, who refuses to
+                    sign over property to his captors. Holmes and Mycroft
+                    investigate, leading them to a house in Beckenham where
+                    Melas and Kratides are found bound and in danger. Though
+                    Melas survives, Kratides is dead. It's revealed that
+                    Kratides was Sophy's brother, seeking to protect her from
+                    her captors. The perpetrators meet their demise in Hungary,
+                    likely at Sophy's hands, avenging her brother's abuse.</span
+                  >
+                  <br />
+                  <button id="toggle-btn5" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn5" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Greek_Interpreter"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Paget_Holmes_Yellow_Face_child.jpg/330px-Paget_Holmes_Yellow_Face_child.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container timeline-container-left">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> December 1893
+
+                </small>
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Final Problem
+                </h2>
+                <p>
+                  The story, set in 1891, introduces the criminal mastermind Professor Moriarty. It was intended to be the final Holmes story, ending with the character's death, but Conan Doyle was later persuaded to revive Holmes for additional stories and novels.
+                  </span>
+                  <br />
+                  <br /><span class="hidden" id="more-text7">
+                    Holmes, wounded from escaping Moriarty's gang, confides in Watson about his pursuit of the criminal organization. Fearing Moriarty's intellect, Holmes plans to flee to Europe while the police capture Moriarty. Watson joins him, and they evade Moriarty's pursuit across Europe. At Reichenbach Falls, Holmes sacrifices himself in a final showdown with Moriarty to protect Watson.Watson discovers the tragic end of their adventure, with Holmes and Moriarty both lost in the swirling waters of the gorge. Watson returns to England, mourning Holmes's death but grateful for his bravery. The Moriarty gang is brought to justice, thanks to Holmes's efforts. Reflecting on Holmes's brilliance, Watson concludes that Sherlock Holmes was truly the greatest man he had ever known.</span
+                  >
+                  <br />
+                  <button id="toggle-btn7" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn7" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Final_Problem"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <div class="flex">
+              <img
+                src="https://cdn.thecollector.com/wp-content/uploads/2023/07/hound-baskervilles-arthur-conan-doyle-movie-poster.jpg?width=600&quality=55"
+                alt=""
+                class="timeline-img"
+              />
+            </div>
+            <div class="timeline-container">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> March 25, 1902</small
+                >
+                <h2 class="font-bold text-3xl">
+                  The Hound of the Baskervilles
+                </h2>
+                <p>
+                  Doyle's "The Hound of the Baskervilles," largely in Dartmoor,
+                  Devon in England's West Country and follows Holmes and Watson
+                  investigating the legend of a fearsome, diabolical hound of
+                  supernatural origin. In writing the novel, Doyle drew
+                  inspiration from the local legend of Sir Richard Cabell of
+                  Brook Hall in Buckfastleigh, Devon, who was rumored to have
+                  sold his soul to the devil and, upon his burial, a ghostly
+                  pack of hounds were said to have come across the moors to howl
+                  at his grave. Holmes returns after his supposed demise,
+                  leading to the novel's acclaim. Voted among the UK's top
+                  novels, it's hailed by Sherlockians as the best Holmes
+                  tale.<br />
+                  <br /><span class="hidden" id="more-text12">
+                    Sherlock Holmes deciphers a cryptic warning, leading to a
+                    murder investigation at Birlstone House. With Inspector
+                    MacDonald, they uncover a tangled web of intrigue
+                    surrounding the victim, Douglas. As secrets unravel, they
+                    confront a sinister plot involving a mysterious American and
+                    a chilling past in the Valley of Fear. In a thrilling twist,
+                    Douglas reveals his true identity as Birdy Edwards, a former
+                    Pinkerton detective entangled in a deadly game of survival.
+                    With Moriarty's shadow looming, Holmes vows to unravel the
+                    truth and bring justice to those who seek to silence the
+                    innocent.</span
+                  >
+                  <br />
+                  <button id="toggle-btn12" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn12" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://www.thecollector.com/sherlock-holmes-arthur-conan-doyle/"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >thecollector.com</a
+                      >
+                      ,
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/The_Adventure_of_the_Devil%27s_Foot_04.jpg/330px-The_Adventure_of_the_Devil%27s_Foot_04.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container  timeline-container-left">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> 1910</small
+                >
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Devil's Foot
+                </h2>
+                <p>
+                  "The Adventure of the Devil's Foot" from 1910 is one of the 56 Sherlock Holmes short stories written by Arthur Conan Doyle. <br />
+                  <br /><span class="hidden" id="more-text10">
+                    Holmes and Watson are summoned to Cornwall by the local vicar and Mortimer Tregennis after a mysterious death. Tregennis's siblings are found dead and insane after a night of cards. The next day, Mortimer also dies in the same manner. Holmes deduces a poisonous plant activated by fire as the murder weapon. He reveals Mortimer as the culprit of the initial crime and accuses Dr. Sterndale, a family friend, of Mortimer's murder. Sterndale confesses, motivated by unrequited love for Brenda Tregennis. Holmes advises Sterndale to leave England and return to Africa.</span
+                  >
+                  <br />
+                  <button id="toggle-btn10" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn10" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Devil%27s_Foot"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0c/The_Adventure_of_the_Dying_Detective_by_Walter_Paget_2.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container ">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> 1913</small
+                >
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Dying Detective
+                </h2>
+                <p>
+                  "The Adventure of the Dying Detective", in some editions
+                  simply titled "The Dying Detective", is one of the 56 Sherlock
+                  Holmes short stories that were written by Sir Arthur Conan
+                  Doyle. It was originally published in Collier's in the United
+                  States on 22 November 1913, and The Strand Magazine in the
+                  United Kingdom in December 1913.[1] Together with seven other
+                  stories, it was collected in His Last Bow (published 1917).<br />
+                  <br /><span class="hidden" id="more-text6">
+                    Dr. Watson rushes to tend to Sherlock Holmes, who appears to
+                    be dying from a rare tropical disease. Holmes, refusing
+                    Watson's help, insults his abilities and demands that Watson
+                    wait before seeking medical assistance. Holmes instructs
+                    Watson to bring Mr. Culverton Smith to him but insists that
+                    Watson leave before Smith arrives. <br />
+                    Watson convinces Smith to visit Holmes, where Smith
+                    confesses to poisoning Holmes with the same illness that
+                    killed his nephew. As Smith tries to conceal evidence of his
+                    crime, Holmes signals Inspector Morton to enter. Holmes
+                    reveals his feigned illness as a ploy to induce Smith's
+                    confession. With Watson as a witness, Smith is arrested for
+                    murder. Holmes clarifies that he respected Watson's medical
+                    expertise but needed to maintain the ruse to trap
+                    Smith.</span
+                  >
+                  <br />
+                  <button id="toggle-btn6" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn6" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://www.thecollector.com/sherlock-holmes-arthur-conan-doyle/"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >thecollector.com</a
+                      >
+                      ,
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Dying_Detective"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Valley_of_Fear_08.jpg/255px-The_Valley_of_Fear_08.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container  timeline-container-left">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> February 27,
+                  1915</small
+                >
+                <h2 class="font-bold text-3xl">The Valley of Fear</h2>
+                <p>
+                  The fourth and
+                  <span class="text-blue-500">final</span> Sherlock Holmes
+                  <span class="text-blue-500">novel</span>, The Valley of Fear, is a tale of secret societies that
+                  drew inspiration from the real-life Molly Maguires of Ireland
+                  and the American Pinkerton agent James McParland.<br />
+                  <br /><span class="hidden" id="more-text3">
+                    Sherlock Holmes deciphers a cryptic warning, leading to a
+                    murder investigation at Birlstone House. With Inspector
+                    MacDonald, they uncover a tangled web of intrigue
+                    surrounding the victim, Douglas. As secrets unravel, they
+                    confront a sinister plot involving a mysterious American and
+                    a chilling past in the Valley of Fear. In a thrilling twist,
+                    Douglas reveals his true identity as Birdy Edwards, a former
+                    Pinkerton detective entangled in a deadly game of survival.
+                    With Moriarty's shadow looming, Holmes vows to unravel the
+                    truth and bring justice to those who seek to silence the
+                    innocent.</span
+                  >
+                  <br />
+                  <button id="toggle-btn3" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn3" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://www.thecollector.com/sherlock-holmes-arthur-conan-doyle/"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >thecollector.com</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/His_Last_Bow_01.jpg/270px-His_Last_Bow_01.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> September 1917
+                  </small
+                >
+                <h2 class="font-bold text-3xl">His Last Bow (Short Story)</h2>
+                <p>
+                  One of 56 short stories about Sherlock Holmes written by Sir Arthur Conan Doyle.The narration is in the third person, instead of the first person narration usually provided by the character of Dr. Watson, and it is a spy story, rather than a detective mystery. Due to its portrayal of British and German spies on the eve of war, its publication during the First World War, and its patriotic themes, the story has been interpreted as a propaganda tool intended to boost morale for British readers.<br />
+                  <br /><span class="hidden" id="more-text9">
+                    As World War I looms, German agent Von Bork prepares to flee England with his trove of intelligence. His contact, "Altamont," arrives, but it's actually Sherlock Holmes in disguise. Holmes and Watson, posing as the chauffeur, apprehend Von Bork after revealing they've been feeding false information to the Germans. Holmes, retired but called back for this case, has meticulously tracked down spies across continents. With Von Bork captured, Holmes and Watson deliver him to Scotland Yard. Reflecting on the war's approach, Holmes cryptically tells Watson of an "east wind" coming, symbolizing the impending upheaval.</span
+                  >
+                  <br />
+                  <button id="toggle-btn9" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn9" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/His_Last_Bow_(short_story)"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >thecollector.com</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/The_Adventure_of_the_Veiled_Lodger_2a.jpg/330px-The_Adventure_of_the_Veiled_Lodger_2a.jpg"
+              alt=""
+              class="timeline-img"
+            />
+            <div class="timeline-container timeline-container-left ">
+              <div
+                class="group hover:bg-white hover:text-black bg-black border border-white text-white p-6 rounded-xl shadow-md flex flex-col space-y-3"
+              >
+                <small class="group-hover:text-yellow-600"
+                  ><span class="italic">Published:</span> 1927</small
+                >
+                <h2 class="font-bold text-3xl">
+                  The Adventure of the Veiled Lodger
+                </h2>
+                <p>
+                  "The Adventure of the Veiled Lodger" (1927), one of the 56 Sherlock Holmes short stories written by British author Sir Arthur Conan Doyle, is one of 12 stories in the cycle collected as The Case-Book of Sherlock Holmes.<br />
+                  <br /><span class="hidden" id="more-text8">
+                    Mrs. Merrilow seeks Holmes's help with her lodger, Mrs. Ronder, whose disfigured face and nighttime outbursts suggest a troubling past. Referencing Abbas Parva, Holmes recalls a tragic circus incident involving Mr. Ronder's death. Mrs. Ronder confesses to a plan to kill her abusive husband with her lover, Leonardo, who then abandoned her. Despite contemplating suicide, Mrs. Ronder finds hope in Holmes's words. Her decision not to end her life marks a new beginning.</span
+                  >
+                  <br />
+                  <button id="toggle-btn8" class="mt-2 text-blue-500">
+                    Read More
+                  </button>
+                  <button id="hide-btn8" class="hidden mt-2 text-blue-500">
+                    Hide
+                  </button>
+                  <br />
+                  <span class="italic"
+                    ><small
+                      >source:
+                      <a
+                        href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Veiled_Lodger"
+                        target="_blank"
+                        class="underline underline-offset-4"
+                        >wikipedia</a
+                      ></small
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </section>
+      <hr />
+      <section id="fact" class="mb-16">
+        <h1
+          class="text-white reveal font-[sherlock] text-center text-6xl my-20 lg:mt-20 lg:mb-0 flex justify-center hover:transition-all hover:scale-105 transition-all"
+        >
+          Did you know?
+        </h1>
+        <div
+          class="flex min-h-[80vh] items-center justify-center flex-col gap-10 lg:flex-row"
+        >
+          <div class="group h-96 w-80 [perspective:1000px] reveal">
+            <div
+              class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            >
+              <div class="absolute inset-0 bg-white rounded-xl">
+                <img
+                  class="h-full w-full rounded-xl shadow-xl shadow-black/40"
+                  src="assets/images/magnifying-glass.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+              >
+                <div
+                  class="flex min-h-full flex-col items-center justify-center text-black"
+                >
+                  <h1 class="text-3xl pb-5 text-orange-950">
+                    Sherrinford Holmes?
+                  </h1>
+                  <p>
+                    <small>
+                      Sir Arthur Conan Doyle originally named the detective
+                      <span
+                        class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-orange-500 bg-black text-white ps-1"
+                        >Sherrinford</span
+                      >
+                      but changed it, possibly due to the existence of
+                      Nottingham cricketers named Sherwin and Shacklock, as the
+                      author was a cricket enthusiast.</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group h-96 w-80 [perspective:1000px] reveal">
+            <div
+              class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            >
+              <div
+                class="absolute inset-0 bg-white rounded-xl [backface-visibility:hidden]"
+              >
+                <img
+                  class="h-full w-full rounded-xl shadow-xl shadow-black/40"
+                  src="assets/images/magnifying-glass.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+              >
+                <div
+                  class="flex min-h-full flex-col items-center justify-center text-black"
+                >
+                  <h1 class="text-3xl pb-5 text-orange-950">
+                    Real life inspiration
+                  </h1>
+                  <p>
+                    <small>
+                      Doyle was inspired by <br /><span
+                        class="w-max animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-orange-500 text-white bg-black ps-1"
+                        >Dr. Joseph Bell</span
+                      >, a notable Scottish surgeon known for his diagnostic
+                      prowess and astute observation, in crafting the character
+                      of Sherlock Holmes.
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group h-96 w-80 [perspective:1000px] reveal">
+            <div
+              class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            >
+              <div
+                class="absolute inset-0 bg-white rounded-xl [backface-visibility:hidden]"
+              >
+                <img
+                  class="h-full w-full rounded-xl shadow-xl shadow-black/40"
+                  src="assets/images/magnifying-glass.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+              >
+                <div
+                  class="flex min-h-full flex-col items-center justify-center text-black"
+                >
+                  <h1 class="text-3xl pb-5 text-orange-950">
+                    Honorary Fellowship
+                  </h1>
+                  <p>
+                    <small>
+                      In 2002, Britain's Royal Society of Chemistry honored the
+                      detective for his use of forensic science and analytical
+                      chemistry to solve crimes, making Sherlock Holmes the
+                      first and only fictional character to be awarded an
+                      <span
+                        class="w-max animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-orange-500 text-white bg-black ps-1"
+                      >
+                        honorary fellowship.</span
+                      ></small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group h-96 w-80 [perspective:1000px] reveal">
+            <div
+              class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            >
+              <div
+                class="absolute inset-0 bg-white rounded-xl [backface-visibility:hidden]"
+              >
+                <img
+                  class="h-full w-full rounded-xl shadow-xl shadow-black/40"
+                  src="assets/images/magnifying-glass.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+              >
+                <div
+                  class="flex min-h-full flex-col items-center justify-center text-black"
+                >
+                  <h1 class="text-3xl pb-5 text-orange-950">
+                    Language is no barrier
+                  </h1>
+                  <p>
+                    <small>
+                      Doyle's books and stories have been translated into
+                      <span
+                        class="w-max animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-orange-500 text-white bg-black ps-1"
+                      >
+                        98</span
+                      >
+                      languages</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="soon" class="min-h-screen w-screen bg-black">
+        <h1 class="text-white reveal font-[sherlock] text-center text-6xl my-20 pb-5 flex justify-center hover:transition-all hover:scale-105 transition-all">
+          What readers say
+        </h1>
+        <div class="grid lg:grid-cols-4 px-10  gap-10 group ">
+          <figure class="reveal group bg-transparent cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 border  text-white hover:bg-white rounded-2xl hover:shadow-sm hover:shadow-white overflow-hidden rotate-1 hover:rotate-0 transition duration-200">
+              <blockquote class="p-8">
+                <div class="mb-5 text-yellow-100">
+                  <svg width="45" height="36" class="fill-current"><path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path></svg>
+                </div>
+                <p class="group-hover:text-black text-white">
+                  One of my favorite fictional characters. Yes im a brotha who likes the Sherlock Holmes series. 
+                </p>
+              </blockquote>
+              <div class="flex items-center justify-between px-8 py-5 bg-transparent text-white bg-gradient-to-br from-yellow-300 to-yellow-600 border-t-2 border-white transition duration-200">
+                <div class="flex items-center gap-5">
+                  <figcaption class="text-white font-semibold">
+                    <div class=" hover:text-white/80">
+                      Tyrell Hemingway
+                    </div>
+                    <div class="flex items-center mt-5">
+                      <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-3 h-3 ms-1 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                    </div>
+                  </figcaption>
+                  
+                </div>
+
+              </div>
+          </figure>
+
+          <figure class="reveal group bg-transparent cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 border  text-white hover:bg-white rounded-2xl hover:shadow-sm hover:shadow-white overflow-hidden -rotate-2 hover:-rotate-1 transition duration-200">
+            <blockquote class="p-8">
+              <div class="mb-5 text-gray-300">
+                <svg width="45" height="36" class="fill-current"><path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path></svg>
+              </div>
+              <p class=" text-white group-hover:text-black">
+                Overall, I enjoyed reading these vignettes, and have a feeling I’ll appreciate even more the longer stories when I get to them.
+              </p>
+            </blockquote>
+            <div class="flex items-center justify-between px-8 py-5 bg-gradient-to-br from-gray-500 to-black">
+              <div class="flex items-center gap-5">
+                <figcaption class="text-white font-semibold">
+                  <div class="hover:text-white/80">Jon Bloomer</div>
+                  <div class="flex items-center mt-5">
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                  </div>
+                </figcaption>
+              </div>
+
+            </div>
+          </figure>
+
+          <figure class="reveal group bg-transparent cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 border  text-white hover:bg-white rounded-2xl hover:shadow-sm hover:shadow-white overflow-hidden rotate-1 hover:rotate-0 transition duration-200">
+            <blockquote class="p-8">
+              <div class="mb-5 text-yellow-100">
+                <svg width="45" height="36" class="fill-current"><path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path></svg>
+              </div>
+              <p class="group-hover:text-black text-white">
+                Time does not change great literature This was completely entertaining and no matter how old you are it's still great to read over the ones you enjoyed the first time.
+              </p>
+            </blockquote>
+            <div class="flex items-center justify-between px-8 py-5 bg-transparent text-white bg-gradient-to-br from-yellow-300 to-yellow-600 border-t-2 border-white transition duration-200">
+              <div class="flex items-center gap-5">
+                <figcaption class="text-white font-semibold">
+                  <div class=" hover:text-white/80">
+                    Rowan Wiese
+                  </div>
+                  <div class="flex items-center mt-5">
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 ms-1 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                  </div>
+                </figcaption>
+                
+              </div>
+
+            </div>
+          </figure>
+
+          <figure class="reveal group bg-transparent cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 border  text-white hover:bg-white rounded-2xl hover:shadow-sm hover:shadow-white overflow-hidden -rotate-2 hover:-rotate-1 transition duration-200">
+            <blockquote class="p-8">
+              <div class="mb-5 text-gray-300">
+                <svg width="45" height="36" class="fill-current"><path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path></svg>
+              </div>
+              <p class=" text-white group-hover:text-black">
+                My overall rating is 4.5 stars for the entire bind up. I do list each story and my rating individually, as well as my average rating for each collection.*
+              </p>
+            </blockquote>
+            <div class="flex items-center justify-between px-8 py-5 bg-gradient-to-br from-gray-500 to-black">
+              <div class="flex items-center gap-5">
+                <figcaption class="text-white font-semibold">
+                  <div class="hover:text-white/80">Marissa</div>
+                  <div class="flex items-center mt-5">
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                    <svg class="w-3 h-3 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                    </svg>
+                  </div>
+                </figcaption>
+              </div>
+
+            </div>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-white text-center w-full bg-black h-5 test border-t-[1px] border-t-white mt-5 lg:mt-0 z-50">
+      <small>Educational Purposes Only &copy;Jiaern2024</small>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
